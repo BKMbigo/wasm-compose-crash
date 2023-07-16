@@ -73,7 +73,7 @@ kotlin {
 android {
 
     compileSdk = 33
-    namespace = "com.github.bkmbigo.wasm.compose"
+    namespace = "com.github.bkmbigo.solitaireanimation"
 
     //sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")
@@ -98,9 +98,8 @@ android {
 
 compose {
     experimental {
-        web.application {}
+        web {
+            application {}
+        }
     }
-
-    kotlinCompilerPlugin.set(libs.versions.compose.multiplatform.wasm.get())
-    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=${libs.versions.kotlin.get()}")
 }

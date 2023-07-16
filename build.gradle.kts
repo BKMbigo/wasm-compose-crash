@@ -26,10 +26,10 @@ allprojects {
             val isComposeGroup = requested.module.group.startsWith("org.jetbrains.compose")
             val isComposeCompiler = requested.module.group.startsWith("org.jetbrains.compose.compiler")
             if (isComposeGroup && !isComposeCompiler && !isWasm && !isJs) {
-                useVersion("1.4.1")
+                useVersion("1.4.0")
             }
             if (requested.module.name.startsWith("kotlin-stdlib")) {
-                useVersion("1.9.0")
+                useVersion("1.8.21")
             }
             if(requested.module.name.contains("material-icons-extended")) {
                 useVersion("1.4.0-dev-wasm05")
